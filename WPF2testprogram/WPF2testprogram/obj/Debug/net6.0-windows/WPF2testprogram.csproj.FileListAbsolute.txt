@@ -1,0 +1,4 @@
+C:\Users\4702306\source\repos\Collective-development-of-software-products\WPF2testprogram\WPF2testprogram\obj\Debug\net6.0-windows\MainWindow.g.cs
+C:\Users\4702306\source\repos\Collective-development-of-software-products\WPF2testprogram\WPF2testprogram\obj\Debug\net6.0-windows\App.g.cs
+C:\Users\4702306\source\repos\Collective-development-of-software-products\WPF2testprogram\WPF2testprogram\obj\Debug\net6.0-windows\WPF2testprogram_MarkupCompile.cache
+C:\Users\4702306\source\repos\Collective-development-of-software-products\WPF2testprogram\WPF2testprogram\obj\Debug\net6.0-windows\WPF2testprogram_MarkupCompile.lref

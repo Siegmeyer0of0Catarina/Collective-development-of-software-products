@@ -1,0 +1,53 @@
+﻿<Window x:Class="WPF3base.MainWindow"
+ xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+ xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+  Height="500" Width="1386"
+KeyDown="Window_KeyDown">
+    <Window.CommandBindings>
+        <CommandBinding Command="Save" Executed="SaveCommandExecuted"
+CanExecute="SaveCommandCanExecute" />
+        <CommandBinding Command="Copy" Executed="CopyCommandExecuted" />
+        <CommandBinding Command="Paste" Executed="PasteCommandExecuted" />
+    </Window.CommandBindings>
+    <Grid RenderTransformOrigin="0.432,0.489">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*" />
+            <ColumnDefinition Width="*" />
+        </Grid.ColumnDefinitions>
+        <ListBox x:Name="StudentsListBox" Grid.Column="0"
+SelectionChanged="StudentsListBox_SelectionChanged">
+            <ListBox.ItemTemplate>
+                <DataTemplate>
+                    <TextBlock Text="{Binding}" />
+                </DataTemplate>
+            </ListBox.ItemTemplate>
+        </ListBox>
+        <StackPanel Grid.Column="1" Margin="30,10,10,10">
+
+            <TextBlock Text="First Name:" />
+            <TextBox x:Name="FirstNameTextBox" />
+            <TextBlock Text="Patronymic:" />
+            <TextBox x:Name="PatronymicTextBox" />
+            <TextBlock Text="Last Name:" />
+            <TextBox x:Name="LastNameTextBox" />
+            <TextBlock Text="Date of Birth:" />
+            <TextBox x:Name="DateOfBirthTextBox" />
+            <TextBlock Text="Faculty:" />
+            <TextBox x:Name="FacultyTextBox" />
+            <TextBlock Text="Group:" />
+            <TextBox x:Name="GroupTextBox" />
+
+            <StackPanel Orientation="Horizontal" HorizontalAlignment="Center" Margin="0, 10,
+0, 0" Width="594">
+                <Button Content="Add" Click="AddButton_Click" Width="100" Margin="5"/>
+                <Button Content="Delete" Click="DeleteButton_Click" Width="100" Margin="5"/>
+                <Button x:Name="SaveButton" Content="Save" Click="SaveButton_Click"
+Width="100" Margin="5"/>
+                <Button x:Name="LoadButton" Content="Load" Click="LoadButton_Click"
+Width="100" Margin="5"/>
+                <Button Content="Copy" Command="Copy" Width="71" Margin="5" />
+                <Button Content="Paste" Command="Paste" Width="68" Margin="5" />
+            </StackPanel>
+        </StackPanel>
+    </Grid>
+</Window>

@@ -1,0 +1,13 @@
+﻿<Window x:Class="WPF4test.MainWindow"
+xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+xmlns:converters="clr-namespace:WPF4test"
+Title="MainWindow" Height="105" Width="266.919" >
+    <Window.Resources>
+        <converters:DateConverter x:Key="dateConverter"/>
+    </Window.Resources>
+    <Grid>
+        <Label x:Name="labelForDate" Content="{Binding
+Path=Date,Converter={StaticResource dateConverter}}" />
+    </Grid>
+</Window>
